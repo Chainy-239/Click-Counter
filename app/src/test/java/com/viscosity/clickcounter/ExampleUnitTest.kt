@@ -1,4 +1,4 @@
-package com.viscosity.clickcount
+package com.viscosity.clickcounter
 
 import org.junit.Test
 

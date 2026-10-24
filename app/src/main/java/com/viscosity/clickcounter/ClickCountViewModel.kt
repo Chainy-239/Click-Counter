@@ -1,4 +1,4 @@
-package com.viscosity.clickcount
+package com.viscosity.clickcounter
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -6,7 +6,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.compose.runtime.setValue
 
-class ClickCountViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
+class ClickCounterViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
     // Brain ke andar ka secret box (Sirf ViewModel isko badal sakta hai)
 
     var count by mutableIntStateOf(savedStateHandle.get<Int>("current_count") ?: 0)

@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ClickCount"
+rootProject.name = "ClickCounter"
 include(":app")

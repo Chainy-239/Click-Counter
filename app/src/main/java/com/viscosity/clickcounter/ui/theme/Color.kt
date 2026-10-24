@@ -1,4 +1,4 @@
-package com.viscosity.clickcount.ui.theme
+package com.viscosity.clickcounter.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
