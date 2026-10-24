@@ -1,4 +1,4 @@
-package com.viscosity.clickcount
+package com.viscosity.clickcounter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.viscosity.clickcount.ui.theme.ClickCountTheme
+import com.viscosity.clickcounter.ui.theme.ClickCounterTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.SavedStateViewModelFactory
 import android.app.Application
@@ -37,9 +37,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ClickCountTheme {
+            ClickCounterTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    val myViewModel: ClickCountViewModel = viewModel(
+                    val myViewModel: ClickCounterViewModel = viewModel(
                         factory = SavedStateViewModelFactory(
                             application = applicationContext.applicationContext as Application,
                             owner = this
@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
                     )
 
                     // Yahan se saara saaman ViewModel ka lekar screen me jaa raha hai
-                    ClickCountScreen(
+                    ClickCounterScreen(
                         count = myViewModel.count,
                         onIncrement = { myViewModel.incrementCount() },
                         onDecrement = { myViewModel.decrementCount() },
@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ClickCountScreen(
+fun ClickCounterScreen(
     count: Int,
     onIncrement: () -> Unit,
     onDecrement: () -> Unit,
@@ -139,9 +139,9 @@ fun ClickCountScreen(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun ClickCountScreenPreview() {
-    ClickCountTheme {
-        ClickCountScreen(
+fun ClickCounterScreenPreview() {
+    ClickCounterTheme {
+        ClickCounterScreen(
             count = 5,
             onIncrement = {},
             onDecrement = {},

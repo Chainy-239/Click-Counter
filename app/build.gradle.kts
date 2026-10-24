@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.viscosity.clickcount"
+    namespace = "com.viscosity.clickcounter"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.viscosity.clickcount"
+        applicationId = "com.viscosity.clickcounter"
         minSdk = 28
         targetSdk = 37
         versionCode = 1
